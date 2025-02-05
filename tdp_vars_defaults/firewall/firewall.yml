@@ -886,3 +886,85 @@ firewalld_rules:
         - internal
         - public
       state: present
+  
+    # Alluxio
+  alluxio_cluster:
+    - name: alluxio_master_rpc_port
+      short: Alluxio Master - RPC port - ?
+      port: "{{ alluxio_master_rpc_port }}"
+      protocol: tcp
+      zones:
+        - internal
+      state: present
+    - name: alluxio_master_web_port
+      short: Alluxio Master - Web UI port - ?
+      port: "{{ alluxio_master_web_port }}"
+      protocol: tcp
+      zones:
+        - public
+      state: present
+    - name: alluxio_job_master_rpc_port
+      short: Alluxio Job Master - RPC port - ?
+      port: "{{ alluxio_job_master_rpc_port }}"
+      protocol: tcp
+      zones:
+        - internal
+      state: present
+    - name: alluxio_job_master_web_port
+      short: Alluxio Job Master - Web UI port - ?
+      port: "{{ alluxio_job_master_web_port }}"
+      protocol: tcp
+      zones:
+        - public
+      state: present
+    - name: alluxio_worker_rpc_port
+      short: Alluxio Worker - RPC port - ?
+      port: "{{ alluxio_worker_rpc_port }}"
+      protocol: tcp
+      zones:
+        - internal
+      state: present
+    - name: alluxio_worker_web_port
+      short: Alluxio Worker - Web UI port - ?
+      port: "{{ alluxio_worker_web_port }}"
+      protocol: tcp
+      zones:
+        - public
+      state: present
+    - name: alluxio_job_worker_rpc_port
+      short: Alluxio Job Worker - RPC port - ?
+      port: "{{ alluxio_job_worker_rpc_port }}"
+      protocol: tcp
+      zones:
+        - internal
+      state: present
+    - name: alluxio_job_worker_data_port
+      short: Alluxio Job Worker Data - TCP port - ?
+      port: "{{ alluxio_job_worker_data_port }}"
+      protocol: tcp
+      zones:
+        - internal
+      state: present
+    - name: alluxio_job_worker_web_port
+      short: Alluxio Job Worker - Web UI port - ?
+      port: "{{ alluxio_job_worker_web_port }}"
+      protocol: tcp
+      zones:
+        - public
+      state: present
+    - name: alluxio_proxy_port
+      short: Alluxio Proxy - TCP Port - ?
+      port: "{{ alluxio_proxy_port }}"
+      protocol: tcp
+      zones:
+        - interal 
+        - public
+      state: present
+    - name: alluxio_remote_logs_port
+      short: Alluxio Remote Logs - TCP Port - ?
+      port: "{{ alluxio_job_worker_web_port }}"
+      protocol: tcp
+      zones:
+        - internal
+      state: present
+

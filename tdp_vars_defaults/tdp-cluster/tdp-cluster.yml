@@ -40,6 +40,20 @@ exporter_livy_jmxremote_password: "{{ jmxremote_password }}"
 exporter_livy_spark3_http_port: 18204
 exporter_livy_spark3_jmxremote_username: "{{ jmxremote_username }}"
 exporter_livy_spark3_jmxremote_password: "{{ jmxremote_password }}"
+
+#Alluxio ports
+alluxio_master_rpc_port: 19998
+alluxio_master_web_port: 19999
+alluxio_job_master_rpc_port: 20001
+alluxio_job_master_web_port: 20002
+alluxio_worker_rpc_port: 29999
+alluxio_worker_web_port: 30000
+alluxio_job_worker_rpc_port: 30001
+alluxio_job_worker_data_port: 30002
+alluxio_job_worker_web_port: 30003
+alluxio_proxy_port: 39999
+alluxio_remote_logs_port: 45600 
+
 #################################
 # Service & Component logs dirs #
 #################################
